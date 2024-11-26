@@ -1,11 +1,29 @@
 .App {
     --header_height: 60px;
+
 }
 
 .hw {
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    padding: 24px 20px 32px;
+    &>div:first-child {
+        margin-bottom: 55px;
+    }
+    &>div {
+        max-width: 1200px;
+        margin: 0 auto;
 
+    }
 }
 
 .hwTitle {
 
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+    max-width: 1200px;
+    margin: 130px auto 10px;
+    padding: 0 20px;
 }

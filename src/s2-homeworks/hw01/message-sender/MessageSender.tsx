@@ -49,7 +49,6 @@ const MessageSender = (props: any) => {
                 <textarea
                     id={'hw1-textarea'}
                     className={s.textarea}
-                    ref={textareaRef}
 
                     title={'Shift+Enter for send'}
                     placeholder={'Type your message'}
