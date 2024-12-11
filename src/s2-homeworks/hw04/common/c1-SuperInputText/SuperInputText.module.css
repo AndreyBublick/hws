@@ -2,19 +2,34 @@
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    top: 1461px;
+    left: 70px;
+    border-radius: 5px;
+
+    border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .inputWrapper {
+    position: relative;
 }
 
 .superInput {
 }
 
 .errorInput {
+    border-color: red;
+
 }
 
 .errorInput:focus {
+    outline-color: red;
 }
 
 .error {
+    position: absolute;
+    top: -60%;
+    left: 0;
+    color: red;
 }
