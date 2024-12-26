@@ -12,18 +12,21 @@ import s from './HW6.module.css'
  */
 
 const HW6 = () => {
-    const [value, setValue] = useState<string>('')
+    const [value, setValue] = useState<string>('');
+
+    const string = 'hw6-editable-span-value';
 
     const save = () => {
-        saveState<string>('hw6-editable-span-value', value)
+        saveState<string>(string, value);
     }
     const restore = () => {
         // делают студенты
-
+        setValue(restoreState(string,value));
     }
 
     return (
         <div id={'hw6'}>
+
             <div className={s2.hwTitle}>Homework #6</div>
 
             {/*демонстрация возможностей компоненты:*/}
