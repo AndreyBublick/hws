@@ -1,4 +1,4 @@
-/*.radio {
+.radio {
     width: 24px;
     height: 24px;
     box-sizing: border-box;
@@ -8,8 +8,8 @@
     position: relative;
     border-radius: 50%;
 }
-*/
-/*.radio:focus {
+
+.radio:focus {
     border: none;
     outline: none;
 }
@@ -41,9 +41,9 @@
     outline-color: black;
 
 
-}*/
+}
 
-/*
+
 .label {
     cursor: pointer;
     display: flex;
@@ -61,4 +61,4 @@
     flex-direction: column;
     gap: 16px;
 }
-*/
+
