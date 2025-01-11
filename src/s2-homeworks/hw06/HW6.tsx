@@ -4,6 +4,7 @@ import { restoreState, saveState } from './localStorage/localStorage'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s from './HW6.module.css'
+import {useParams} from "react-router-dom";
 
 /*
  * 1 - в файле SuperEditableSpan.tsx дописать логику функций onEnterCallback, onBlurCallback, onDoubleClickCallBack
@@ -13,7 +14,8 @@ import s from './HW6.module.css'
 
 const HW6 = () => {
     const [value, setValue] = useState<string>('');
-
+const rrr = useParams();
+    console.log(rrr)
     const string = 'hw6-editable-span-value';
 
     const save = () => {
