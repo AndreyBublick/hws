@@ -15,7 +15,6 @@ import {useParams} from "react-router-dom";
 const HW6 = () => {
     const [value, setValue] = useState<string>('');
 const rrr = useParams();
-    console.log(rrr)
     const string = 'hw6-editable-span-value';
 
     const save = () => {
