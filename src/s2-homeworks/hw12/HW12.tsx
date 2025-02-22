@@ -21,7 +21,7 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
-   const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const themeId = useSelector(getThemeId);
 
     const change = (id: string) => {
@@ -43,15 +43,16 @@ const HW12 = () => {
             </div>
 
             <div className={s2.hw}>
-                <SuperSelect
-                    id={'hw12-select-theme'}
-                    className={s.select}
-                    options={themes}
-                    onChangeOption={change}
-
-                    // сделать переключение тем
-
-                />
+                <div className={s.wrapper}>
+                    <SuperSelect
+                        id={'hw12-select-theme'}
+                        className={s.select}
+                        options={themes}
+                        onChangeOption={change}
+                        value={themes.find(theme => theme.id === themeId)?.id}
+                        // сделать переключение тем
+                    />
+                </div>
             </div>
         </div>
     )

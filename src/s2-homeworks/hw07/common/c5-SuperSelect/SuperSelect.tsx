@@ -1,7 +1,7 @@
 import React, {
     SelectHTMLAttributes,
     DetailedHTMLProps,
-    ChangeEvent, useMemo,
+    ChangeEvent,
 } from 'react'
 import s from './SuperSelect.module.css'
 
@@ -55,7 +55,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
             className={finalSelectClassName}
             onChange={onChangeCallback}
             {...restProps}
-           /* value={value}*/
+            value={value}
         >
             {mappedOptions}
         </select>

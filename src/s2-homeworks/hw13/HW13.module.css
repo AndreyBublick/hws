@@ -1,7 +1,15 @@
 .buttonsContainer {
+    display: flex;
+    gap: 1.5rem;
+
 }
 
 .responseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 35px 0 90px;
 }
 
 .imageContainer {
@@ -14,9 +22,17 @@
 }
 
 .code {
+    font-family: Montserrat, serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+margin-bottom: 12px;
 }
 
 .text {
 }
 .info {
+}
+.wrapper{
+    padding: 0;
 }
