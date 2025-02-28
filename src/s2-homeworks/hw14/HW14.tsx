@@ -7,6 +7,7 @@ import {useSearchParams} from 'react-router-dom'
 
 /*
 * 1 - дописать функцию onChangeTextCallback в SuperDebouncedInput
+*
 * 2 - дописать функцию sendQuery в HW14
 * 3 - дописать функцию onChangeText в HW14
 * 4 - сделать стили в соответствии с дизайном
@@ -34,22 +35,34 @@ const HW14 = () => {
         setLoading(true)
         getTechs(value)
             .then((res) => {
+                const data = res?.data;
+                if (data) {
+                    setTechs(res.data.techs);
+                }
+
+                /*setTechs();*/
                 // делает студент
 
                 // сохранить пришедшие данные
 
                 //
             })
+            .finally(() => {
+                setLoading(false)
+            })
     }
 
     const onChangeText = (value: string) => {
-        setFind(value)
+        setFind(value);
+        setSearchParams(value);
+
         // делает студент
 
         // добавить/заменить значение в квери урла
         // setSearchParams(
 
         //
+
     }
 
     useEffect(() => {
@@ -69,18 +82,22 @@ const HW14 = () => {
             <div className={s2.hwTitle}>Homework #14</div>
 
             <div className={s2.hw}>
-                <SuperDebouncedInput
-                    id={'hw14-super-debounced-input'}
-                    value={find}
-                    onChangeText={onChangeText}
-                    onDebouncedChange={sendQuery}
-                />
+                <div >
+                    <div className={s.wrapper}>
+                        <SuperDebouncedInput
+                            id={'hw14-super-debounced-input'}
+                            value={find}
+                            onChangeText={onChangeText}
+                            onDebouncedChange={sendQuery}
+                            style={{marginBottom: 10}}
+                        />
 
-                <div id={'hw14-loading'} className={s.loading}>
-                    {isLoading ? '...ищем' : <br/>}
+                        <div id={'hw14-loading'} className={s.loading}>
+                            {isLoading ? '...ищем' : <br/>}
+                        </div>
+                    </div>
+                    {mappedTechs}
                 </div>
-
-                {mappedTechs}
             </div>
         </div>
     )
