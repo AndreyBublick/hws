@@ -98,9 +98,12 @@ const HW15 = () => {
         // setSearchParams(
 
         //
+        const params = {count: `${count}`, page: `${1}`}
         setSort(newSort);
 
         setPage(1);
+        setSearchParams(params)
+        sendQuery(params)
     }
 
     useEffect(() => {
