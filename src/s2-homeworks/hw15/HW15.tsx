@@ -98,7 +98,7 @@ const HW15 = () => {
         // setSearchParams(
 
         //
-        const params = {count: `${count}`, page: `${1}`}
+        const params = {count: `${count}`, page: `${1}`,sort: `${newSort}`};
         setSort(newSort);
 
         setPage(1);
