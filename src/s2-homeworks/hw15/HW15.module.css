@@ -11,13 +11,28 @@
 
     font-weight: 600;
     text-transform: Capitalize;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 
+    &>span>img{
+        display: flex;
+        align-items: center;
+    }
 
 }
 
 .developerHeader {
     font-weight: 600;
     text-transform: Capitalize;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &>span>img{
+        display: flex;
+        align-items: center;
+    }
 }
 
 .row {
