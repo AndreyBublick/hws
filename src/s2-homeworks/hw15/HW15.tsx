@@ -132,8 +132,8 @@ const HW15 = () => {
             <div style={{position: 'relative'}}>
             <div className={s2.hw}>
                 <div>
-                {idLoading && <div id={'hw15-loading'}  className={s.loading}><CircularProgress sx={{position:'relative',left:'-240px'}} size={140} /></div>}
-
+                {idLoading && <div id={'hw15-loading'}  className={s.loading}><CircularProgress  size={140} /></div>}
+                    {/*sx={{position:'relative',left:'-240px'}}*/}
                 <SuperPagination
                     page={page}
                     itemsCountForPage={count}
