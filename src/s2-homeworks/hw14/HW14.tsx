@@ -36,9 +36,8 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 const data = res?.data;
-                if (data) {
-                    setTechs(res.data.techs);
-                }
+               data && setTechs(res.data.techs);
+
 
                 /*setTechs();*/
                 // делает студент

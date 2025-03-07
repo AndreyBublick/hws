@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {CircularProgress} from "@mui/material";
 
 /*
 * 1 - дописать SuperPagination
@@ -51,15 +52,24 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                if (res) {
+                    setTechs(res.data.techs);
+
+                    setTotalCount(res.data.totalCount)
+                }
+
                 // делает студент
 
                 // сохранить пришедшие данные
 
                 //
             })
+            .finally(() => {
+                setLoading(false)
+            })
     }
 
-    const onChangePagination = (newPage: number, newCount: number) => {
+    const onChangePagination =  (newPage: number, newCount: number) => {
         // делает студент
 
         // setPage(
@@ -67,8 +77,15 @@ const HW15 = () => {
 
         // sendQuery(
         // setSearchParams(
-
+      /*  const lastPage = Math.ceil(totalCount/newCount);*/
         //
+        const params = {count: `${newCount}`, page: `${newPage}`};
+        setPage(newPage);
+        setCount(+newCount);
+        setSearchParams(params);
+        sendQuery(params)
+
+
     }
 
     const onChangeSort = (newSort: string) => {
@@ -81,6 +98,9 @@ const HW15 = () => {
         // setSearchParams(
 
         //
+        setSort(newSort);
+
+        setPage(1);
     }
 
     useEffect(() => {
@@ -104,10 +124,15 @@ const HW15 = () => {
 
     return (
         <div id={'hw15'}>
-            <div className={s2.hwTitle}>Homework #15</div>
 
+
+
+    <div className={s2.hwTitle}>Homework #15</div>
+
+            <div style={{position: 'relative'}}>
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                <div>
+                {idLoading && <div id={'hw15-loading'} className={s.loading}><CircularProgress color={'success'} /></div>}
 
                 <SuperPagination
                     page={page}
@@ -129,6 +154,8 @@ const HW15 = () => {
                 </div>
 
                 {mappedTechs}
+                </div>
+            </div>
             </div>
         </div>
     )
