@@ -43,7 +43,8 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
                     '.MuiPaginationItem-root': {
                         margin: '0 4px', // Отступы между кнопками
-                        borderRadius: '0.2rem'
+                        borderRadius: '0.2rem',
+                        backgroundColor: 'none',
                     },
                     '.Mui-selected': {
                         backgroundColor: '#0066CC',

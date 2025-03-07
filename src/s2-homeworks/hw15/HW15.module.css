@@ -54,7 +54,7 @@
     align-items: center;
     transform: translate(-50%, -50%);
     z-index: 1;
-    &:before{
+    /*&:before{
         content: "";
         position: absolute;
         top: 0;
@@ -64,5 +64,5 @@
         background-color: #4a4a4a;
         opacity: 0.5;
         z-index: -1;
-    }
+    }*/
 }
